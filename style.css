@@ -1,0 +1,549 @@
+/* ============================================================
+   Aadil Designer Boutique — "The Atelier Ledger" design system
+   Ghumar Mandi, Ludhiana
+   ============================================================ */
+
+:root {
+  --emerald: #0E2E24;
+  --emerald-deep: #081C15;
+  --emerald-soft: #164436;
+  --gold: #C9A24B;
+  --gold-light: #F0D48A;
+  --gold-dim: #9C7A2F;
+  --ivory: #F7F2E7;
+  --ivory-warm: #F1E8D6;
+  --maroon: #6E1423;
+  --charcoal: #2B2420;
+  --blush: #D8B4A0;
+  --line: rgba(201, 162, 75, 0.35);
+
+  --font-display: 'Bodoni Moda', 'Didot', Georgia, serif;
+  --font-body: 'Jost', Arial, sans-serif;
+
+  --max-width: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--emerald);
+  margin: 0 0 0.4em;
+  letter-spacing: 0.2px;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-style: italic; line-height: 1.05; }
+h2 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+
+p { margin: 0 0 1em; }
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.9em;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+
+/* ---------------- Header / Nav ---------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(14, 46, 36, 0.97);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px clamp(20px, 5vw, 60px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ivory);
+}
+
+.brand img { width: 46px; height: 46px; }
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-text strong {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gold-light);
+}
+
+.brand-text span {
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--blush);
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--ivory-warm);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+.nav-cta {
+  border: 1px solid var(--gold);
+  padding: 9px 20px;
+  border-radius: 999px;
+  color: var(--gold-light) !important;
+  font-size: 0.78rem !important;
+}
+.nav-cta:hover { background: var(--gold); color: var(--emerald-deep) !important; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.nav-toggle span {
+  width: 26px; height: 1.5px; background: var(--gold-light);
+}
+
+/* ---------------- Buttons ---------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--emerald-deep);
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--ivory);
+  border-color: var(--gold);
+}
+.btn-outline:hover { background: rgba(201,162,75,0.12); transform: translateY(-2px); }
+
+.btn-whatsapp {
+  background: #1f5c46;
+  color: var(--ivory);
+  border-color: #1f5c46;
+}
+.btn-whatsapp:hover { background: #276a51; transform: translateY(-2px); }
+
+/* ---------------- Hero ---------------- */
+.hero {
+  background: radial-gradient(ellipse at top, var(--emerald-soft) 0%, var(--emerald) 55%, var(--emerald-deep) 100%);
+  color: var(--ivory);
+  padding: 90px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 { color: var(--ivory); }
+
+.hero-copy p.lead {
+  color: var(--blush);
+  font-size: 1.05rem;
+  max-width: 46ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-art { opacity: 0; animation: fadeUp 1.1s ease forwards 0.2s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-copy > * { opacity: 0; animation: fadeUp 0.9s ease forwards; }
+.hero-copy .eyebrow { animation-delay: 0.05s; }
+.hero-copy h1 { animation-delay: 0.15s; }
+.hero-copy .lead { animation-delay: 0.3s; }
+.hero-copy .hero-actions { animation-delay: 0.45s; }
+
+/* thread divider */
+.thread {
+  color: var(--gold);
+  width: 100%;
+  height: 26px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+.thread-section { padding: 6px 0; }
+
+/* ---------------- Sections ---------------- */
+.section { padding: 90px 0; }
+.section-ivory { background: var(--ivory); }
+.section-warm { background: var(--ivory-warm); }
+.section-emerald { background: var(--emerald); color: var(--ivory); }
+.section-emerald h2, .section-emerald h3 { color: var(--gold-light); }
+.section-emerald .eyebrow { color: var(--blush); }
+
+.section-head {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.section-head p { color: var(--charcoal); opacity: 0.8; }
+.section-emerald .section-head p { color: var(--ivory-warm); opacity: 0.85; }
+
+/* reveal on scroll */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---------------- Philosophy strip ---------------- */
+.strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+.strip-item .num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 2.4rem;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ---------------- Collection cards ---------------- */
+.grid-collections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.card {
+  background: var(--emerald);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px 22px 26px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.card:hover { transform: translateY(-8px); border-color: var(--gold); }
+
+.card img { width: 100%; max-width: 150px; margin: 0 auto 18px; }
+
+.card h3 { color: var(--gold-light); margin-bottom: 6px; }
+.card p.tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 14px;
+}
+.card p.desc { color: var(--ivory-warm); font-size: 0.9rem; opacity: 0.85; margin-bottom: 18px; }
+
+.card-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
+
+/* ---------------- Two column editorial ---------------- */
+.editorial {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+}
+.editorial.flip { grid-template-columns: 1.15fr 0.85fr; }
+.editorial.flip .editorial-art { order: 2; }
+
+.editorial-art {
+  background: var(--emerald);
+  border: 1px solid var(--line);
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.editorial-copy .eyebrow { color: var(--gold-dim); }
+
+/* ---------------- Photo placeholder slots ---------------- */
+.photo-slot {
+  aspect-ratio: 4/5;
+  border: 1.5px dashed var(--gold);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background: repeating-linear-gradient(135deg, rgba(201,162,75,0.05) 0 12px, rgba(201,162,75,0.09) 12px 24px);
+}
+.photo-slot span {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  line-height: 1.6;
+}
+
+/* ---------------- Owner / About ---------------- */
+.owner-block {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.owner-block img { max-width: 220px; margin: 0 auto; }
+
+/* ---------------- Timeline (craft process) ---------------- */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.timeline-item { border-top: 2px solid var(--gold); padding-top: 18px; }
+.timeline-item .step { font-family: var(--font-display); font-style: italic; color: var(--gold); font-size: 1.4rem; }
+
+/* ---------------- WhatsApp CTA block ---------------- */
+.whatsapp-block {
+  background: var(--maroon);
+  color: var(--ivory);
+  border-radius: 6px;
+  padding: 48px clamp(24px, 5vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.whatsapp-block h3 { color: var(--gold-light); margin-bottom: 6px; }
+.whatsapp-block p { color: var(--blush); margin-bottom: 0; max-width: 42ch; }
+
+/* ---------------- Floating WhatsApp button ---------------- */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: #25D366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 30px; height: 30px; }
+
+/* ---------------- Testimonials ---------------- */
+.quote-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+}
+.quote p.q { font-style: italic; font-family: var(--font-display); font-size: 1.05rem; color: var(--emerald); }
+.quote p.who { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); }
+
+/* ---------------- Contact ---------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.info-list { list-style: none; padding: 0; margin: 0; }
+.info-list li {
+  display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line);
+}
+.info-list .label { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); min-width: 120px; }
+
+.map-frame {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  height: 340px;
+}
+.map-frame iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.25) sepia(0.15); }
+
+.form-field { margin-bottom: 18px; }
+.form-field label {
+  display: block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold-dim); margin-bottom: 8px;
+}
+.form-field input, .form-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--ivory);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--charcoal);
+}
+.form-field input:focus, .form-field textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+/* ---------------- Footer ---------------- */
+.site-footer {
+  background: var(--emerald-deep);
+  color: var(--ivory-warm);
+  padding: 60px 0 28px;
+  position: relative;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-grid h4 { color: var(--gold-light); font-size: 0.95rem; }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-grid li { margin-bottom: 10px; font-size: 0.9rem; }
+.footer-grid a:hover { color: var(--gold-light); }
+.footer-bottom {
+  border-top: 1px solid rgba(201,162,75,0.2);
+  padding-top: 22px;
+  font-size: 0.78rem;
+  color: var(--blush);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------------- Focus visibility ---------------- */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav.open .nav-links {
+    display: flex;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--emerald-deep);
+    flex-direction: column;
+    padding: 20px clamp(20px, 5vw, 60px) 28px;
+    gap: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero .container { grid-template-columns: 1fr; }
+  .hero-art { order: -1; max-width: 320px; margin: 0 auto; }
+  .grid-collections { grid-template-columns: repeat(2, 1fr); }
+  .strip { grid-template-columns: 1fr; gap: 30px; }
+  .editorial, .editorial.flip { grid-template-columns: 1fr; }
+  .editorial.flip .editorial-art { order: 0; }
+  .owner-block { grid-template-columns: 1fr; text-align: center; }
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .quote-strip { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .whatsapp-block { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 520px) {
+  .grid-collections { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
+  .section { padding: 64px 0; }
+}
