@@ -1,0 +1,21 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shakeel Ahmed, master tailor, monogram badge">
+  <defs>
+    <linearGradient id="ownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D48A"/>
+      <stop offset="55%" stop-color="#C9A24B"/>
+      <stop offset="100%" stop-color="#8A6A28"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#0E2E24"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#ownGrad)" stroke-width="2"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ownGrad)" stroke-width="0.6"/>
+  <!-- needle and thread arc encircling initials -->
+  <path d="M40 130 C 55 165, 145 165, 160 130" fill="none" stroke="url(#ownGrad)" stroke-width="1" opacity="0.7"/>
+  <g transform="translate(150,120) rotate(35)">
+    <rect x="0" y="0" width="3" height="18" rx="1.5" fill="url(#ownGrad)"/>
+    <ellipse cx="1.5" cy="2" rx="2.4" ry="1.8" fill="none" stroke="url(#ownGrad)" stroke-width="0.6"/>
+  </g>
+  <text x="100" y="98" text-anchor="middle" font-family="'Bodoni Moda', Georgia, serif" font-size="46" font-style="italic" fill="url(#ownGrad)">SA</text>
+  <line x1="65" y1="112" x2="135" y2="112" stroke="url(#ownGrad)" stroke-width="0.6"/>
+  <text x="100" y="126" text-anchor="middle" font-family="'Jost', Arial, sans-serif" font-size="8" letter-spacing="2.5" fill="url(#ownGrad)">MASTER TAILOR</text>
+</svg>

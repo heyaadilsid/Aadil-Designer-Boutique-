@@ -1,0 +1,22 @@
+<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aadil Designer Boutique monogram">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D48A"/>
+      <stop offset="50%" stop-color="#C9A24B"/>
+      <stop offset="100%" stop-color="#9C7A2F"/>
+    </linearGradient>
+  </defs>
+  <circle cx="70" cy="70" r="60" fill="none" stroke="url(#goldGrad)" stroke-width="1.4"/>
+  <circle cx="70" cy="70" r="53" fill="none" stroke="url(#goldGrad)" stroke-width="0.6"/>
+
+  <!-- corner paisley ticks -->
+  <path d="M70 10 C 73 15, 73 20, 70 23 C 67 20, 67 15, 70 10 Z" fill="url(#goldGrad)"/>
+  <path d="M70 130 C 73 125, 73 120, 70 117 C 67 120, 67 125, 70 130 Z" fill="url(#goldGrad)"/>
+  <path d="M10 70 C 15 67, 20 67, 23 70 C 20 73, 15 73, 10 70 Z" fill="url(#goldGrad)"/>
+  <path d="M130 70 C 125 67, 120 67, 117 70 C 120 73, 125 73, 130 70 Z" fill="url(#goldGrad)"/>
+
+  <!-- monogram -->
+  <text x="70" y="76" text-anchor="middle" font-family="'Bodoni Moda', 'Didot', Georgia, serif" font-size="34" font-style="italic" fill="url(#goldGrad)">ADB</text>
+  <line x1="42" y1="87" x2="98" y2="87" stroke="url(#goldGrad)" stroke-width="0.7"/>
+  <text x="70" y="98" text-anchor="middle" font-family="'Jost', Arial, sans-serif" font-size="7" letter-spacing="3" fill="url(#goldGrad)">LUDHIANA</text>
+</svg>

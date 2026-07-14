@@ -1,0 +1,8 @@
+<svg viewBox="0 0 800 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="presentation">
+  <path d="M0 20 C 150 5, 250 35, 400 20 C 550 5, 650 35, 800 20"
+        fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+  <g transform="translate(392,10)">
+    <rect x="0" y="0" width="4" height="20" rx="2" fill="currentColor"/>
+    <ellipse cx="2" cy="3" rx="3" ry="2.4" fill="none" stroke="currentColor" stroke-width="0.8"/>
+  </g>
+</svg>

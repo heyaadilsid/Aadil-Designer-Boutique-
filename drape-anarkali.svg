@@ -1,0 +1,25 @@
+<svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anarkali festive silhouette sketch">
+  <defs>
+    <linearGradient id="anaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6E1423" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <!-- fitted yoke -->
+  <path d="M92 18 C 92 10, 128 10, 128 18 L 132 62 C 110 70, 110 70, 88 62 Z"
+        fill="url(#anaGrad)" stroke="#C9A24B" stroke-width="1.2"/>
+  <!-- flowing gown flare from waist -->
+  <path d="M88 62 C 55 110, 40 190, 34 262 C 75 274, 145 274, 186 262 C 180 190, 165 110, 132 62 C 118 68, 102 68, 88 62 Z"
+        fill="url(#anaGrad)" stroke="#C9A24B" stroke-width="1.2"/>
+  <!-- flare seam lines (umbrella panels) -->
+  <path d="M100 66 C 85 130, 72 200, 65 260" fill="none" stroke="#C9A24B" stroke-width="0.5" opacity="0.7"/>
+  <path d="M110 68 C 105 130, 100 200, 96 262" fill="none" stroke="#C9A24B" stroke-width="0.5" opacity="0.7"/>
+  <path d="M120 68 C 122 130, 124 200, 124 262" fill="none" stroke="#C9A24B" stroke-width="0.5" opacity="0.7"/>
+  <path d="M130 66 C 140 130, 152 200, 158 260" fill="none" stroke="#C9A24B" stroke-width="0.5" opacity="0.7"/>
+  <!-- scalloped hem -->
+  <path d="M34 262 C 45 268, 55 256, 66 262 C 77 268, 87 256, 98 262 C 109 268, 119 256, 130 262 C 141 268, 151 256, 162 262 C 173 268, 183 256, 186 262"
+        fill="none" stroke="#6E1423" stroke-width="1.4"/>
+  <!-- neckline embroidery -->
+  <path d="M97 20 C 105 27, 115 27, 123 20" fill="none" stroke="#6E1423" stroke-width="1"/>
+  <g fill="#C9A24B"><circle cx="102" cy="24" r="1.3"/><circle cx="110" cy="27" r="1.3"/><circle cx="118" cy="24" r="1.3"/></g>
+</svg>
